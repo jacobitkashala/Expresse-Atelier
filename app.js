@@ -1,7 +1,11 @@
 const express = require("express");
 const students = require("./Bd");
-const uuid = require("uuid")
+const uuid = require("uuid");
+
 const app = express();
+
+app.use(express.json());
+
 /*
 npm init -y
 npm i express
@@ -42,7 +46,15 @@ app.get("/api/students/:id", (req, resp) => {
     //faire le post
 
 app.post("/api/students", (req, resp) => {
-    const newStudent = { id: 10, nom: "Kota", prenom: "Typescript" }
+    console.log(req.body)
+    const { nom, prenom } = req.body
+
+    const newStudent = {
+        id: uuid.v4(),
+        nom: nom,
+        prenom: prenom,
+    };
+    students.push(newStudent);
 })
 
 

@@ -3,8 +3,8 @@ const Student = [
     { id: 2, nom: "Buhendwa", prenom: "FrontMaster" },
     { id: 3, nom: "Mianza", prenom: "Elle" },
     { id: 4, nom: "salomo", prenom: "jouer" },
-    { id: 4, nom: "Zender", prenom: "Dev Senior" },
-    { id: 4, nom: "xend", prenom: "lolo" },
+    { id: 5, nom: "Zender", prenom: "Dev Senior" },
+    { id: 6, nom: "xend", prenom: "lolo" },
 ]
 
 module.exports = Student;
